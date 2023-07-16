@@ -12,9 +12,7 @@ struct UserRepository {
     
     static let shared = UserRepository()
     
-    private init() {
-        
-    }
+    private init() {}
     
     func dbRef() -> Firestore {
         return Firestore.firestore()
@@ -24,15 +22,9 @@ struct UserRepository {
         return dbRef().collection("users/").document(userId)
     }
     
-    func saveAccount(user: User) {        
-        do {
-            let data = try JSONEncoder().encode(user)
-            UserDefaults.standard.setValue(data, forKey: "loggedInUser")
-        } catch {
-            return
-        }
-                
-        userDocumentRef(userId: user.authId).setData(user.dictionary)
+    func createNewUser(user: DbUser) async throws {
+        
+        try userDocumentRef(userId: user.authId).setData(from: user, merge: false)
     }
     
     

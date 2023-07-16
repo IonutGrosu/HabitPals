@@ -44,6 +44,7 @@ struct HabitListRow: View {
                 ))
             HStack {
                 ProgressView(value: habit.completedNumberOfDays, total: habit.totalNumberOfDays)
+                    .tint(.green)
                 Text("\(habit.completedNumberOfDaysAsInt)/\(habit.totalNumberOfDaysAsInt)")
                     .font(.caption2)
             }

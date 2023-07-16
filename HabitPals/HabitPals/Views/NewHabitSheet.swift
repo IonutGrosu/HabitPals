@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct NewHabitSheet: View {
-    @AppStorage("userId") private var userId: String = ""
-    
     @Binding var habits: [Habit]
     @Binding var isPresentingSheet: Bool
     var saveHabitAction: () -> Void
@@ -29,7 +27,7 @@ struct NewHabitSheet: View {
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Confirm"){
                             // save the newly created habit
-                            try? HabitRepository.shared.saveHabit(userId: userId, habit: newHabit)
+                            try? HabitRepository.shared.saveHabit(habit: newHabit)
                             habits.append(newHabit)
                             newHabit = Habit.emptyHabit
                             isPresentingSheet = false

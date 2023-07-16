@@ -11,17 +11,14 @@ import SwiftUI
 struct HabitPalsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @AppStorage("signedIn") var isSignedIn = false
-    
-//    @StateObject private var store = HabitStore()
-    
+        
     var body: some Scene {
         WindowGroup {
             if !isSignedIn {
-                LoginView()
+                AuthenticationView()
             } else {
                 RootView()
             }
         }
-        
     }
 }

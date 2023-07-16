@@ -37,7 +37,9 @@ struct HabitsView: View {
             }
         }
         .task {
-            await viewModel.fetchHabits()
+            do {
+                try await viewModel.fetchHabits()
+            } catch{}
         }
         .onAppear{
             if !firstOnAppear {
