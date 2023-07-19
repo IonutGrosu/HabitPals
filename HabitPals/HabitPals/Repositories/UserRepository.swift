@@ -18,14 +18,34 @@ struct UserRepository {
         return Firestore.firestore()
     }
     
-    func userDocumentRef(userId: String) -> DocumentReference {
-        return dbRef().collection("users/").document(userId)
+    func usersCollection() -> CollectionReference {
+        return dbRef().collection("users")
+    }
+    
+    func userDocumentRef(_ userId: String) -> DocumentReference {
+        return usersCollection().document(userId)
     }
     
     func createNewUser(user: DbUser) async throws {
         
-        try userDocumentRef(userId: user.authId).setData(from: user, merge: false)
+        try userDocumentRef(user.authId).setData(from: user, merge: true)
+        
+        // TODO - also create document in the friends collection
+        FriendsRepository.shared.createEmptyFriendDocument(userId: user.authId)
     }
     
+    func getUser(_ userId: String) async -> DbUser {
+        var result = DbUser.emptyUser
+        do {
+            result = try await userDocumentRef(userId).getDocument(as: DbUser.self)
+        }catch {}
+        print("user for id:\(userId) is \(result)")
+        return result
+    }
     
+    func searchUserByNamePrefix(_ namePrefix: String) async -> Query {
+        usersCollection()
+            .whereField("name", isGreaterThanOrEqualTo: namePrefix)
+            .whereField("name", isLessThanOrEqualTo: "\(namePrefix)~")
+    }
 }

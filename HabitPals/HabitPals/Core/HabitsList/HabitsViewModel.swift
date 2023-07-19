@@ -14,24 +14,29 @@ final class HabitsViewModel: ObservableObject {
     @Published var isLoading: Bool = true
         
     func fetchHabits() async throws {
-        let userId = try AuthenticationService.shared.getAuthenticatedUser().uid
+        let userId = try AuthenticationService.shared.getAuthenticatedUserId()
         isLoading = true
         self.habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
         isLoading = false
     }
     
-    func updateHabit(habit: Habit) {
-//        let userId = FirebaseAuthService.shared.getAuthenticatedUserId()
-//
-//        try? HabitRepository.shared.saveHabit(userId: userId, habit: habit)
+    func saveHabit(habit: Habit) throws {
+        let userId = try AuthenticationService.shared.getAuthenticatedUserId()
+
+        try HabitRepository.shared.saveHabit(habit: habit, userId: userId)
     }
     
-    func addListenerForHabits() {
-//        let userId = FirebaseAuthService.shared.getAuthenticatedUserId()
-//
-//        HabitRepository.shared.addListenerForHabitsByUserId(userId: userId) { [weak self] habits in
-//            print("updated habits:\(habits)")
-//            self?.habits = habits
-//        }
+    func updateHabit(habit: Habit) throws {
+        let userId = try AuthenticationService.shared.getAuthenticatedUserId()
+
+        try? HabitRepository.shared.saveHabit(habit: habit, userId: userId)
+    }
+    
+    func addListenerForHabits() throws {
+        let userId = try AuthenticationService.shared.getAuthenticatedUserId()
+
+        HabitRepository.shared.addListenerForHabitsByUserId(userId: userId) { [weak self] habits in
+            self?.habits = habits
+        }
     }
 }

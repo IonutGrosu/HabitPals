@@ -11,6 +11,14 @@
 		6E3E1BD92A63D3A100D10C76 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E1BD82A63D3A100D10C76 /* AuthenticationService.swift */; };
 		6E3E1BDB2A63D3DC00D10C76 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E1BDA2A63D3DC00D10C76 /* AuthenticationViewModel.swift */; };
 		6E3E1BDF2A63DB9500D10C76 /* SignInGoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E1BDE2A63DB9500D10C76 /* SignInGoogleHelper.swift */; };
+		6E3E1BE12A6478CC00D10C76 /* FriendsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E1BE02A6478CC00D10C76 /* FriendsListViewModel.swift */; };
+		6E3E1BE32A64796C00D10C76 /* FriendsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E1BE22A64796C00D10C76 /* FriendsRepository.swift */; };
+		6E6613A52A67117F00D7D994 /* UserSearchInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6613A42A67117F00D7D994 /* UserSearchInfoRowView.swift */; };
+		6E6613A72A671E7000D7D994 /* FriendHabitsInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6613A62A671E7000D7D994 /* FriendHabitsInfoRowView.swift */; };
+		6E8697302A652B8700AFE09B /* +Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86972F2A652B8700AFE09B /* +Sequence.swift */; };
+		6E8697322A66DE3100AFE09B /* DbFriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8697312A66DE3100AFE09B /* DbFriendList.swift */; };
+		6E8697352A67051500AFE09B /* NewFriendSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8697342A67051500AFE09B /* NewFriendSearchView.swift */; };
+		6E8697372A67052900AFE09B /* NewFriendSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8697362A67052900AFE09B /* NewFriendSearchViewModel.swift */; };
 		6E8B53032A62A4C700E9569D /* HabitPalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53022A62A4C700E9569D /* HabitPalsApp.swift */; };
 		6E8B53072A62A4C900E9569D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8B53062A62A4C900E9569D /* Assets.xcassets */; };
 		6E8B530A2A62A4C900E9569D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8B53092A62A4C900E9569D /* Preview Assets.xcassets */; };
@@ -21,7 +29,7 @@
 		6E8B53302A62A52300E9569D /* HabitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B532E2A62A52300E9569D /* HabitRepository.swift */; };
 		6E8B53342A62A55000E9569D /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53322A62A55000E9569D /* AccountViewModel.swift */; };
 		6E8B53352A62A55000E9569D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53332A62A55000E9569D /* AccountView.swift */; };
-		6E8B53382A62A55700E9569D /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53372A62A55700E9569D /* FriendsView.swift */; };
+		6E8B53382A62A55700E9569D /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53372A62A55700E9569D /* FriendsListView.swift */; };
 		6E8B533C2A62A56300E9569D /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B533A2A62A56300E9569D /* HabitsView.swift */; };
 		6E8B533D2A62A56300E9569D /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B533B2A62A56300E9569D /* HabitsViewModel.swift */; };
 		6E8B53412A62A58F00E9569D /* +View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B533F2A62A58F00E9569D /* +View.swift */; };
@@ -67,6 +75,14 @@
 		6E3E1BD82A63D3A100D10C76 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		6E3E1BDA2A63D3DC00D10C76 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		6E3E1BDE2A63DB9500D10C76 /* SignInGoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogleHelper.swift; sourceTree = "<group>"; };
+		6E3E1BE02A6478CC00D10C76 /* FriendsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewModel.swift; sourceTree = "<group>"; };
+		6E3E1BE22A64796C00D10C76 /* FriendsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRepository.swift; sourceTree = "<group>"; };
+		6E6613A42A67117F00D7D994 /* UserSearchInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchInfoRowView.swift; sourceTree = "<group>"; };
+		6E6613A62A671E7000D7D994 /* FriendHabitsInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendHabitsInfoRowView.swift; sourceTree = "<group>"; };
+		6E86972F2A652B8700AFE09B /* +Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+Sequence.swift"; sourceTree = "<group>"; };
+		6E8697312A66DE3100AFE09B /* DbFriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbFriendList.swift; sourceTree = "<group>"; };
+		6E8697342A67051500AFE09B /* NewFriendSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendSearchView.swift; sourceTree = "<group>"; };
+		6E8697362A67052900AFE09B /* NewFriendSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendSearchViewModel.swift; sourceTree = "<group>"; };
 		6E8B52FF2A62A4C700E9569D /* HabitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B53022A62A4C700E9569D /* HabitPalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPalsApp.swift; sourceTree = "<group>"; };
 		6E8B53062A62A4C900E9569D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +96,7 @@
 		6E8B532E2A62A52300E9569D /* HabitRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitRepository.swift; sourceTree = "<group>"; };
 		6E8B53322A62A55000E9569D /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		6E8B53332A62A55000E9569D /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		6E8B53372A62A55700E9569D /* FriendsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		6E8B53372A62A55700E9569D /* FriendsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		6E8B533A2A62A56300E9569D /* HabitsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
 		6E8B533B2A62A56300E9569D /* HabitsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
 		6E8B533F2A62A58F00E9569D /* +View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+View.swift"; sourceTree = "<group>"; };
@@ -133,20 +149,14 @@
 		6E3E1BD32A63CEEA00D10C76 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6E6613A82A67F63800D7D994 /* NewHabit */,
+				6E8697332A6704FE00AFE09B /* NewFriendSearch */,
 				6E3E1BD52A63D2FB00D10C76 /* Authentication */,
-				6E3E1BD42A63CF2700D10C76 /* New Group */,
 				6E8B53392A62A56300E9569D /* HabitsList */,
 				6E8B53312A62A55000E9569D /* Account */,
 				6E8B53362A62A55700E9569D /* Friends */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		6E3E1BD42A63CF2700D10C76 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		6E3E1BD52A63D2FB00D10C76 /* Authentication */ = {
@@ -157,6 +167,24 @@
 				6E3E1BDE2A63DB9500D10C76 /* SignInGoogleHelper.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		6E6613A82A67F63800D7D994 /* NewHabit */ = {
+			isa = PBXGroup;
+			children = (
+				6E8B53552A62A5C400E9569D /* NewHabitSheet.swift */,
+			);
+			path = NewHabit;
+			sourceTree = "<group>";
+		};
+		6E8697332A6704FE00AFE09B /* NewFriendSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6E6613A42A67117F00D7D994 /* UserSearchInfoRowView.swift */,
+				6E8697342A67051500AFE09B /* NewFriendSearchView.swift */,
+				6E8697362A67052900AFE09B /* NewFriendSearchViewModel.swift */,
+			);
+			path = NewFriendSearch;
 			sourceTree = "<group>";
 		};
 		6E8B52F62A62A4C700E9569D = {
@@ -229,6 +257,7 @@
 			children = (
 				6E8B532D2A62A52300E9569D /* UserRepository.swift */,
 				6E8B532E2A62A52300E9569D /* HabitRepository.swift */,
+				6E3E1BE22A64796C00D10C76 /* FriendsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -245,7 +274,9 @@
 		6E8B53362A62A55700E9569D /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				6E8B53372A62A55700E9569D /* FriendsView.swift */,
+				6E8B53372A62A55700E9569D /* FriendsListView.swift */,
+				6E3E1BE02A6478CC00D10C76 /* FriendsListViewModel.swift */,
+				6E6613A62A671E7000D7D994 /* FriendHabitsInfoRowView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -264,6 +295,7 @@
 			children = (
 				6E8B533F2A62A58F00E9569D /* +View.swift */,
 				6E8B53402A62A58F00E9569D /* AppDelegate.swift */,
+				6E86972F2A652B8700AFE09B /* +Sequence.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -271,6 +303,7 @@
 		6E8B53432A62A59A00E9569D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6E8697312A66DE3100AFE09B /* DbFriendList.swift */,
 				6E8B53442A62A59A00E9569D /* DbUser.swift */,
 				6E8B53452A62A59A00E9569D /* Symbols.swift */,
 				6E8B53462A62A59A00E9569D /* Habit.swift */,
@@ -289,7 +322,6 @@
 		6E8B53542A62A5C400E9569D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6E8B53552A62A5C400E9569D /* NewHabitSheet.swift */,
 				6E8B53562A62A5C400E9569D /* SymbolPicker.swift */,
 				6E8B53572A62A5C400E9569D /* HabitListRow.swift */,
 				6E8B53582A62A5C400E9569D /* CustomTabBarView.swift */,
@@ -450,8 +482,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E8B53422A62A58F00E9569D /* AppDelegate.swift in Sources */,
-				6E8B53382A62A55700E9569D /* FriendsView.swift in Sources */,
+				6E8B53382A62A55700E9569D /* FriendsListView.swift in Sources */,
 				6E8B533C2A62A56300E9569D /* HabitsView.swift in Sources */,
+				6E8697352A67051500AFE09B /* NewFriendSearchView.swift in Sources */,
+				6E8697302A652B8700AFE09B /* +Sequence.swift in Sources */,
 				6E8B53632A62A5C400E9569D /* HabitEditView.swift in Sources */,
 				6E8B53352A62A55000E9569D /* AccountView.swift in Sources */,
 				6E3E1BDB2A63D3DC00D10C76 /* AuthenticationViewModel.swift in Sources */,
@@ -460,20 +494,26 @@
 				6E8B53412A62A58F00E9569D /* +View.swift in Sources */,
 				6E8B53602A62A5C400E9569D /* HabitListRow.swift in Sources */,
 				6E3E1BD92A63D3A100D10C76 /* AuthenticationService.swift in Sources */,
+				6E8697322A66DE3100AFE09B /* DbFriendList.swift in Sources */,
+				6E6613A52A67117F00D7D994 /* UserSearchInfoRowView.swift in Sources */,
 				6E3E1BDF2A63DB9500D10C76 /* SignInGoogleHelper.swift in Sources */,
 				6E8B53302A62A52300E9569D /* HabitRepository.swift in Sources */,
 				6E8B53342A62A55000E9569D /* AccountViewModel.swift in Sources */,
 				6E8B535D2A62A5C400E9569D /* DateUtils.swift in Sources */,
+				6E6613A72A671E7000D7D994 /* FriendHabitsInfoRowView.swift in Sources */,
 				6E8B53612A62A5C400E9569D /* CustomTabBarView.swift in Sources */,
 				6E8B534E2A62A59B00E9569D /* Symbols.swift in Sources */,
 				6E8B535E2A62A5C400E9569D /* NewHabitSheet.swift in Sources */,
 				6E8B53622A62A5C400E9569D /* MainTabGroupView.swift in Sources */,
 				6E8B534D2A62A59B00E9569D /* DbUser.swift in Sources */,
+				6E3E1BE12A6478CC00D10C76 /* FriendsListViewModel.swift in Sources */,
+				6E8697372A67052900AFE09B /* NewFriendSearchViewModel.swift in Sources */,
 				6E8B534F2A62A59B00E9569D /* Habit.swift in Sources */,
 				6E8B535F2A62A5C400E9569D /* SymbolPicker.swift in Sources */,
 				6E8B53032A62A4C700E9569D /* HabitPalsApp.swift in Sources */,
 				6E8B532F2A62A52300E9569D /* UserRepository.swift in Sources */,
 				6E3E1BD72A63D31400D10C76 /* AuthenticationView.swift in Sources */,
+				6E3E1BE32A64796C00D10C76 /* FriendsRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,16 @@
 import Foundation
 import GoogleSignIn
 
+@MainActor
 final class AccountViewModel: ObservableObject {
-  
+    
+    @Published var currentUser: DbUser = DbUser.emptyUser
+
+    func fetchCurrentAccount() async {
+        guard let userId = try? AuthenticationService.shared.getAuthenticatedUserId() else {return}
+
+        do {
+            currentUser =  try await UserRepository.shared.getUser(userId)
+        }catch{}
+    }
 }

@@ -26,8 +26,7 @@ struct HabitRepository {
         return dbRef().collection("users/").document(userId).collection("habits")
     }
     
-    func saveHabit(habit: Habit) throws {
-        var userId = try AuthenticationService.shared.getAuthenticatedUser().uid
+    func saveHabit(habit: Habit, userId: String) throws {
         try habitDocumentRef(userId: userId, habitId: habit.id.uuidString).setData(from: habit)
     }
     

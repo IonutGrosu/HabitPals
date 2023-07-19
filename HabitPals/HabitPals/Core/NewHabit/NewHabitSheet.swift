@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct NewHabitSheet: View {
+        
     @Binding var habits: [Habit]
     @Binding var isPresentingSheet: Bool
-    var saveHabitAction: () -> Void
+    var saveHabitAction: (_ newHabit: Habit) -> Void
     
     @State private var newHabit: Habit = Habit.emptyHabit
     
@@ -20,18 +21,15 @@ struct NewHabitSheet: View {
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button("Dismiss"){
-                            // save the newly created habit
                             isPresentingSheet = false
                         }
                     }
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Confirm"){
-                            // save the newly created habit
-                            try? HabitRepository.shared.saveHabit(habit: newHabit)
+                            saveHabitAction(newHabit)
                             habits.append(newHabit)
                             newHabit = Habit.emptyHabit
                             isPresentingSheet = false
-                            saveHabitAction()
                         }
                     }
                 }.tint(.green)
@@ -42,7 +40,7 @@ struct NewHabitSheet: View {
 struct NewHabitSheet_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            NewHabitSheet(habits: .constant(Habit.sampleData), isPresentingSheet: .constant(true), saveHabitAction: {})
+            NewHabitSheet(habits: .constant(Habit.sampleData), isPresentingSheet: .constant(true), saveHabitAction: {newHabit in })
         }
     }
 }

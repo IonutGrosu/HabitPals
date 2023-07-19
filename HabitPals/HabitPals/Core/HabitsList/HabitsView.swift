@@ -19,7 +19,9 @@ struct HabitsView: View {
         List {
             ForEach($viewModel.habits) {$habit in
                 HabitListRow(habit: $habit) {
-                    viewModel.updateHabit(habit: habit)
+                    do {
+                        try viewModel.updateHabit(habit: habit)
+                    } catch {}
                 }
                     .listRowSeparator(.hidden)
                     .listRowBackground(
@@ -43,8 +45,10 @@ struct HabitsView: View {
         }
         .onAppear{
             if !firstOnAppear {
-                viewModel.addListenerForHabits()
-                self.firstOnAppear = true
+                do {
+                    try viewModel.addListenerForHabits()
+                    self.firstOnAppear = true
+                } catch {}
             }
         }
         .scrollContentBackground(.hidden)
@@ -60,8 +64,10 @@ struct HabitsView: View {
             }
         })
         .sheet(isPresented: $isShowingHabitCreateSheet, content: {
-            NewHabitSheet(habits: $viewModel.habits, isPresentingSheet: $isShowingHabitCreateSheet){
-                //                viewModel.saveHabit(habit: Habit.emptyHabit)
+            NewHabitSheet(habits: $viewModel.habits, isPresentingSheet: $isShowingHabitCreateSheet){ newHabit in
+                do {
+                    try viewModel.saveHabit(habit: newHabit)
+                } catch{}
             }
         })
         .background{

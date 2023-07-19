@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>177099410074-f3kmmq50dm2dea9jls5n3f4l4en2u3s3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.177099410074-f3kmmq50dm2dea9jls5n3f4l4en2u3s3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD6BIt_VjjiTCKfJ8UZPkztSu0VnjYZNWE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>177099410074</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ionutgrosu.HabitPals</string>
+	<key>PROJECT_ID</key>
+	<string>socialhabittracker-ba56a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>socialhabittracker-ba56a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:177099410074:ios:1f53441ab4603dad7a6d23</string>
+	<key>DATABASE_URL</key>
+	<string>https://socialhabittracker-ba56a-default-rtdb.europe-west1.firebasedatabase.app</string>
+	<key>GIDClientID</key>
+	<string>177099410074-f3kmmq50dm2dea9jls5n3f4l4en2u3s3.apps.googleusercontent.com</string>
+</dict>
+</plist>

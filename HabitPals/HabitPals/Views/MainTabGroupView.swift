@@ -25,7 +25,7 @@ struct MainTabGroupView: View {
                     HabitsView(isShowingHabitCreateSheet: $isShowingHabitCreateSheet)
                         .navigationTitle("Today's Habits")
                 case .FRIENDS:
-                    FriendsView()
+                    FriendsListView()
                         .navigationTitle("Friends")
                 }
                 CustomTabBarView(selectedTab: $selectedTab, isShowingHabitCreateSheet: $isShowingHabitCreateSheet)
