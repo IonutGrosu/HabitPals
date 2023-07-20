@@ -67,4 +67,18 @@ struct FriendsRepository {
             "ids": FieldValue.arrayUnion([currentUserId])
         ])
     }
+    
+    func removeFriend(friendId: String) {
+        guard let currentUserId = try? AuthenticationService.shared.getAuthenticatedUserId() else {return}
+        
+        // remove from current user's friends list
+        userDocumentRef(currentUserId).updateData([
+            "ids": FieldValue.arrayRemove([friendId])
+        ])
+        
+        // remove current user from the friend's list of friends
+        userDocumentRef(friendId).updateData([
+            "ids": FieldValue.arrayRemove([currentUserId])
+        ])
+    }
 }

@@ -15,7 +15,11 @@ struct FriendsListView: View {
     
     var body: some View {
         List($vm.friends, id: \.self) { $friend in
-            FriendHabitsInfoRowView(friend: friend)
+            NavigationLink{
+                FriendHabitsListView(friend: friend)
+            } label: {
+                FriendHabitsInfoRowView(friend: friend)
+            }
         }
         .task {
             await vm.fetchFriends()
@@ -28,7 +32,11 @@ struct FriendsListView: View {
             }
         }
         .sheet(isPresented: $showingSearchSheet, content: {
-            NewFriendSearchView(showingSearchSheet: $showingSearchSheet)
+            NewFriendSearchView(showingSearchSheet: $showingSearchSheet).onDisappear(perform: {
+                Task{
+                    await vm.fetchFriends()
+                }
+            })
         })
     }
 }

@@ -56,6 +56,8 @@ struct HabitRepository {
             
         } catch {}
         
+        print(habits)
+        
         return habits
     }
 }

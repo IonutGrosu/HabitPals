@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ConfettiSwiftUI
 
 struct HabitsView: View {
     @ObservedObject private var viewModel = HabitsViewModel()
@@ -14,11 +15,18 @@ struct HabitsView: View {
     
     @State private var firstOnAppear: Bool = false
     
+    @State private var confettiTrigger: Int = 0
+    
     var body: some View {
         
         List {
             ForEach($viewModel.habits) {$habit in
-                HabitListRow(habit: $habit) {
+                HabitListRow(habit: $habit) {showConfetti in
+                    
+                    if showConfetti {
+                        confettiTrigger += 1
+                    }
+                    
                     do {
                         try viewModel.updateHabit(habit: habit)
                     } catch {}
@@ -38,6 +46,7 @@ struct HabitsView: View {
                             ))
             }
         }
+        .confettiCannon(counter: $confettiTrigger, num: 50, radius: 500)
         .task {
             do {
                 try await viewModel.fetchHabits()

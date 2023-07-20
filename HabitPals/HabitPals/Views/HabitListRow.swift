@@ -10,9 +10,12 @@ import SwiftUI
 struct HabitListRow: View {
     let nonCompletedCheckmark: String = "checkmark.circle"
     let completedCheckmark: String = "checkmark.circle.fill"
+    
     @Binding var habit: Habit
     
-    var habitUpdateAction: () -> Void
+    @State var showConfetti: Bool = false
+    
+    var habitUpdateAction: (_ showConfetti: Bool) -> Void
     
     var body: some View {
         VStack {
@@ -23,10 +26,9 @@ struct HabitListRow: View {
                     .font(.title2)
                 Spacer()
                 Button {
-                    if habit.isCompletedToday == false {
-                        habit.lastCompletionDate = Date()
-                        habit.completedNumberOfDays += 1
-                        habitUpdateAction()
+                    if habit.isCompletedToday == false { 
+                        habit.completeToday()
+                        habitUpdateAction(showConfetti)
                     }
                 } label: {
                     Image(systemName: habit.isCompletedToday==true ? completedCheckmark : nonCompletedCheckmark)
@@ -50,11 +52,14 @@ struct HabitListRow: View {
             }
             .padding()
         }
+        .onChange(of: habit.complete) { _ in
+            showConfetti = true
+        }
     }
 }
 
 struct HabitListRow_Previews: PreviewProvider {
     static var previews: some View {
-        HabitListRow(habit: .constant(Habit.sampleData[0]), habitUpdateAction: {})
+        HabitListRow(habit: .constant(Habit.sampleData[0]), habitUpdateAction: {showConfetti in })
     }
 }

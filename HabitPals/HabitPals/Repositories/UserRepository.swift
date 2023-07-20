@@ -39,7 +39,6 @@ struct UserRepository {
         do {
             result = try await userDocumentRef(userId).getDocument(as: DbUser.self)
         }catch {}
-        print("user for id:\(userId) is \(result)")
         return result
     }
     

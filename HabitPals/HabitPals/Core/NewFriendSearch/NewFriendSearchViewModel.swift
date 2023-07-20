@@ -25,6 +25,28 @@ final class NewFriendSearchViewModel: ObservableObject {
             userSearchResults = querySnapshot.documents.compactMap({try? $0.data(as: DbUser.self)})
             
         } catch {}
+        
+        await removeFriendsFromResult()
+        
+        removeCurrentUserFromResult()
+    }
+    
+    private func removeCurrentUserFromResult() {
+        guard let currentUserId = try? AuthenticationService.shared.getAuthenticatedUserId() else {return}
+        
+        userSearchResults.removeAll { user in
+            user.authId == currentUserId
+        }
+    }
+    
+    private func removeFriendsFromResult() async {
+        guard let currentUserId = try? AuthenticationService.shared.getAuthenticatedUserId() else {return}
+
+        let friendIds = await FriendsRepository.shared.fetchFriendsIds(currentUserId)
+
+        userSearchResults.removeAll { user in
+            friendIds.contains(user.authId)
+        }
     }
     
     func addFriend(friendId: String) {

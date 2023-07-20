@@ -22,6 +22,7 @@ struct NewFriendSearchView: View {
             List($viewModel.userSearchResults, id: \.self) { $user in
                 UserSearchInfoRowView(user: user){
                     viewModel.addFriend(friendId: user.authId)
+                    showingSearchSheet = false
                 }
             }
         }
