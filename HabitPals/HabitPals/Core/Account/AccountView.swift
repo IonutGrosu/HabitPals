@@ -12,14 +12,11 @@ struct AccountView: View {
     
     @StateObject private var viewModel = AccountViewModel()
     
-    
     var body: some View {
         NavigationStack {
             VStack {
                 
-                if let userName = viewModel.currentUser.name?.description {
-                    Text(userName)
-                }
+                UserProfileView(user: $viewModel.currentUser)
                 
                 
                 Button(action: {

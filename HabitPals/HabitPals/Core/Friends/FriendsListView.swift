@@ -24,19 +24,23 @@ struct FriendsListView: View {
         .task {
             await vm.fetchFriends()
         }
+        .refreshable {
+            await vm.fetchFriends()
+        }
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button(action: {showingSearchSheet = true}, label: {
-                    Image(systemName: "plus.circle.fill")
+                    Text("Add friends")
                 })
             }
         }
         .sheet(isPresented: $showingSearchSheet, content: {
-            NewFriendSearchView(showingSearchSheet: $showingSearchSheet).onDisappear(perform: {
-                Task{
-                    await vm.fetchFriends()
-                }
-            })
+            NewFriendSearchView(showingSearchSheet: $showingSearchSheet)
+                .onDisappear(perform: {
+                    Task{
+                        await vm.fetchFriends()
+                    }
+                })
         })
     }
 }

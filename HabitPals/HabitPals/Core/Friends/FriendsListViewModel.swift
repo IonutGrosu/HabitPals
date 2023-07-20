@@ -19,6 +19,8 @@ final class FriendsListViewModel: ObservableObject {
             friends = try await FriendsRepository.shared.fetchFriends(userId)
         } catch {}
         
+        print(friends)
+        
     }
     
 }

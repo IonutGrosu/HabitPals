@@ -8,20 +8,24 @@
 @MainActor
 final class FriendHabitsInfoRowViewModel: ObservableObject {
     
-    @Published var completedTodaysHabits: Bool = true
-    @Published var totalOngoingHabits: Int = 0
-    @Published var habitsCompletedToday: Int = 0
+    @Published var totalOngoingHabits: Double = 0
+    @Published var habitsCompletedToday: Double = 0
+    
+    static let shared = FriendHabitsInfoRowViewModel()
+    
+    private init(){}
     
     func fetchUserHabitsInfo(userId: String) async {
+        totalOngoingHabits = 0
+        habitsCompletedToday = 0
+        
         let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
         print(habits)
         
         habits.forEach { habit in
             totalOngoingHabits += 1
             
-            if !habit.isCompletedToday {
-                completedTodaysHabits = false
-            } else {
+            if habit.isCompletedToday {
                 habitsCompletedToday += 1
             }
         }
@@ -31,14 +35,14 @@ final class FriendHabitsInfoRowViewModel: ObservableObject {
 import SwiftUI
 
 struct FriendHabitsInfoRowView: View {
-    @ObservedObject var viewModel = FriendHabitsInfoRowViewModel()
+    @ObservedObject var viewModel = FriendHabitsInfoRowViewModel.shared
     @State var friend: DbUser
     
     var body: some View {
         HStack {
             if let urlString = friend.pictureURL, let url = URL(string: urlString) {
                 ZStack {
-                    HabitsCompletionStatusArc(totalOngoingHabits: Double(viewModel.totalOngoingHabits), habitsCompletedToday: Double(viewModel.habitsCompletedToday))
+                    
                     AsyncImage(url: url) { image in
                         image
                             .resizable()
@@ -48,7 +52,11 @@ struct FriendHabitsInfoRowView: View {
                     } placeholder: {
                         ProgressView()
                             .frame(width: 50, height: 50)
-                }
+                    }
+                    
+                    HabitsCompletionStatusArc(
+                        totalOngoingHabits: $viewModel.totalOngoingHabits,
+                        habitsCompletedToday: $viewModel.habitsCompletedToday)
                 }
             }
             
@@ -56,7 +64,7 @@ struct FriendHabitsInfoRowView: View {
                 Text(friend.name ?? "")
                     .font(.title2)
                 
-                Text("Completed \(viewModel.habitsCompletedToday) out of \(viewModel.totalOngoingHabits) habits today")
+                Text("Completed \(Int(viewModel.habitsCompletedToday)) out of \(Int(viewModel.totalOngoingHabits)) habits today")
                     .font(.caption2)
             }
             .padding(.leading, 4)

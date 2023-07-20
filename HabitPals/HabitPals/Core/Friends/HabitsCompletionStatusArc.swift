@@ -9,8 +9,8 @@ import SwiftUI
 
 struct HabitsCompletionStatusArc: View {
     
-    @State var totalOngoingHabits: Double
-    @State var habitsCompletedToday: Double
+    @Binding var totalOngoingHabits: Double
+    @Binding var habitsCompletedToday: Double
     var uncompletedHabits: Double {
         totalOngoingHabits-habitsCompletedToday
     }
@@ -23,8 +23,10 @@ struct HabitsCompletionStatusArc: View {
     }
     
     func getEndAngle() -> Double {
-        if totalOngoingHabits == 0 {
-            return 0
+        print(totalOngoingHabits)
+
+        if totalOngoingHabits == 0.0 {
+            return 0.0
         } else {
             return 360.0 * (habitsCompletedToday / totalOngoingHabits)
         }
@@ -32,5 +34,5 @@ struct HabitsCompletionStatusArc: View {
 }
 
 #Preview {
-    HabitsCompletionStatusArc(totalOngoingHabits: 2, habitsCompletedToday: 2)
+    HabitsCompletionStatusArc(totalOngoingHabits: .constant(2), habitsCompletedToday: .constant(2))
 }

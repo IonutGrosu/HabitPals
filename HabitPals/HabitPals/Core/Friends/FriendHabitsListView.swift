@@ -20,29 +20,13 @@ struct FriendHabitsListView: View {
     var body: some View {
         VStack {
             // MARK: Friend profile
-            VStack {
-                if let urlString = friend.pictureURL, let url = URL(string: urlString) {
-                    AsyncImage(url: url) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                            .clipShape(.circle)
-                    } placeholder: {
-                        ProgressView()
-                            .frame(width: 100, height: 100)
-                    }
-                }
-                Text(friend.name ?? "No username available")
-                    .font(.title)
-                    .bold()
-                Button(action: {
-                    FriendsRepository.shared.removeFriend(friendId: friend.authId)
-                    dismiss()
-                }, label: {
-                    Text("Remove friend")
-                }).buttonStyle(.bordered)
-            }.padding()
+            UserProfileView(user: $friend)
+            Button(action: {
+                FriendsRepository.shared.removeFriend(friendId: friend.authId)
+                dismiss()
+            }, label: {
+                Text("Remove friend")
+            }).buttonStyle(.bordered)
             
             // MARK: Friend habits list
             List{
@@ -81,6 +65,9 @@ struct FriendHabitsListView: View {
                             )
                         )
                 )
+                .refreshable {
+                    await viewModel.fetchHabits(userId: friend.authId)
+                }
             }
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
