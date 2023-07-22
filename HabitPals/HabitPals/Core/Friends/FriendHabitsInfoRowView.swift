@@ -56,7 +56,7 @@ struct FriendHabitsInfoRowView: View {
                     
                     HabitsCompletionStatusArc(
                         totalOngoingHabits: $viewModel.totalOngoingHabits,
-                        habitsCompletedToday: $viewModel.habitsCompletedToday)
+                        habitsCompletedToday: $viewModel.habitsCompletedToday, size: 60, lineWidth: 4)
                 }
             }
             

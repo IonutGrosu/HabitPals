@@ -11,14 +11,18 @@ struct HabitsCompletionStatusArc: View {
     
     @Binding var totalOngoingHabits: Double
     @Binding var habitsCompletedToday: Double
+    
+    var size: CGFloat
+    var lineWidth: CGFloat
+    
     var uncompletedHabits: Double {
         totalOngoingHabits-habitsCompletedToday
     }
     
     var body: some View {
         Arc(startAngle: .degrees(0), endAngle: .degrees(getEndAngle()), clockwise: false)
-            .stroke(uncompletedHabits == 0 ? .green : .yellow, lineWidth: 4)
-            .frame(width: 60, height: 60)
+            .stroke(uncompletedHabits == 0 ? .green : .yellow, lineWidth: lineWidth)
+            .frame(width: size, height: size)
             .rotationEffect(.degrees(-90))
     }
     
@@ -34,5 +38,5 @@ struct HabitsCompletionStatusArc: View {
 }
 
 #Preview {
-    HabitsCompletionStatusArc(totalOngoingHabits: .constant(2), habitsCompletedToday: .constant(2))
+    HabitsCompletionStatusArc(totalOngoingHabits: .constant(2), habitsCompletedToday: .constant(2), size: 60, lineWidth: 4)
 }

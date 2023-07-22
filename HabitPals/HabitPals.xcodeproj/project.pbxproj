@@ -26,6 +26,23 @@
 		6E8697372A67052900AFE09B /* NewFriendSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8697362A67052900AFE09B /* NewFriendSearchViewModel.swift */; };
 		6E88756F2A695EC000BE4A69 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E88756E2A695EC000BE4A69 /* UserProfileView.swift */; };
 		6E8875712A69A74900BE4A69 /* +Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875702A69A74900BE4A69 /* +Color.swift */; };
+		6E8875942A6BF81A00BE4A69 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8875782A6BCDB900BE4A69 /* WidgetKit.framework */; };
+		6E8875952A6BF81A00BE4A69 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88757A2A6BCDB900BE4A69 /* SwiftUI.framework */; };
+		6E8875982A6BF81A00BE4A69 /* HabitPalsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875972A6BF81A00BE4A69 /* HabitPalsWidgetBundle.swift */; };
+		6E88759A2A6BF81A00BE4A69 /* HabitPalsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875992A6BF81A00BE4A69 /* HabitPalsWidget.swift */; };
+		6E88759C2A6BF81D00BE4A69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E88759B2A6BF81D00BE4A69 /* Assets.xcassets */; };
+		6E8875A02A6BF81D00BE4A69 /* HabitPalsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6E8875932A6BF81A00BE4A69 /* HabitPalsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E8875AB2A6BF96300BE4A69 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875AA2A6BF96300BE4A69 /* Provider.swift */; };
+		6E8875AD2A6BF98100BE4A69 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875AC2A6BF98100BE4A69 /* SimpleEntry.swift */; };
+		6E8875AF2A6BF9BD00BE4A69 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875AE2A6BF9BD00BE4A69 /* WidgetView.swift */; };
+		6E8875B22A6BFCA400BE4A69 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875B12A6BFCA400BE4A69 /* SmallWidgetView.swift */; };
+		6E8875B42A6BFCB000BE4A69 /* LargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875B32A6BFCB000BE4A69 /* LargeWidgetView.swift */; };
+		6E8875B62A6BFF4800BE4A69 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875B52A6BFF4800BE4A69 /* MediumWidgetView.swift */; };
+		6E8875BD2A6C009A00BE4A69 /* HabitsCompletionStatusArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6613AF2A680F0900D7D994 /* HabitsCompletionStatusArc.swift */; };
+		6E8875BF2A6C010800BE4A69 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6613AD2A680BDA00D7D994 /* Arc.swift */; };
+		6E8875C02A6C03AD00BE4A69 /* +Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875702A69A74900BE4A69 /* +Color.swift */; };
+		6E8875C32A6C0DF000BE4A69 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53462A62A59A00E9569D /* Habit.swift */; };
+		6E8875C42A6C0DF200BE4A69 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53532A62A5C400E9569D /* DateUtils.swift */; };
 		6E8B53032A62A4C700E9569D /* HabitPalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53022A62A4C700E9569D /* HabitPalsApp.swift */; };
 		6E8B53072A62A4C900E9569D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8B53062A62A4C900E9569D /* Assets.xcassets */; };
 		6E8B530A2A62A4C900E9569D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8B53092A62A4C900E9569D /* Preview Assets.xcassets */; };
@@ -61,6 +78,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6E88759E2A6BF81D00BE4A69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E8B52F72A62A4C700E9569D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E8875922A6BF81A00BE4A69;
+			remoteInfo = HabitPalsWidgetExtension;
+		};
 		6E8B53102A62A4CA00E9569D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E8B52F72A62A4C700E9569D /* Project object */;
@@ -76,6 +100,20 @@
 			remoteInfo = HabitPals;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E88758E2A6BCDBC00BE4A69 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6E8875A02A6BF81D00BE4A69 /* HabitPalsWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6E3E1BD62A63D31400D10C76 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -96,6 +134,19 @@
 		6E8697362A67052900AFE09B /* NewFriendSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendSearchViewModel.swift; sourceTree = "<group>"; };
 		6E88756E2A695EC000BE4A69 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		6E8875702A69A74900BE4A69 /* +Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+Color.swift"; sourceTree = "<group>"; };
+		6E8875782A6BCDB900BE4A69 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6E88757A2A6BCDB900BE4A69 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6E8875932A6BF81A00BE4A69 /* HabitPalsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HabitPalsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E8875972A6BF81A00BE4A69 /* HabitPalsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPalsWidgetBundle.swift; sourceTree = "<group>"; };
+		6E8875992A6BF81A00BE4A69 /* HabitPalsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPalsWidget.swift; sourceTree = "<group>"; };
+		6E88759B2A6BF81D00BE4A69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E88759D2A6BF81D00BE4A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E8875AA2A6BF96300BE4A69 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		6E8875AC2A6BF98100BE4A69 /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
+		6E8875AE2A6BF9BD00BE4A69 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		6E8875B12A6BFCA400BE4A69 /* SmallWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
+		6E8875B32A6BFCB000BE4A69 /* LargeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetView.swift; sourceTree = "<group>"; };
+		6E8875B52A6BFF4800BE4A69 /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
 		6E8B52FF2A62A4C700E9569D /* HabitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B53022A62A4C700E9569D /* HabitPalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPalsApp.swift; sourceTree = "<group>"; };
 		6E8B53062A62A4C900E9569D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +181,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E8875902A6BF81A00BE4A69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E8875952A6BF81A00BE4A69 /* SwiftUI.framework in Frameworks */,
+				6E8875942A6BF81A00BE4A69 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E8B52FC2A62A4C700E9569D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,12 +261,64 @@
 			path = NewFriendSearch;
 			sourceTree = "<group>";
 		};
+		6E8875772A6BCDB900BE4A69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E8875782A6BCDB900BE4A69 /* WidgetKit.framework */,
+				6E88757A2A6BCDB900BE4A69 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E8875962A6BF81A00BE4A69 /* HabitPalsWidget */ = {
+			isa = PBXGroup;
+			children = (
+				6E8875BA2A6C000F00BE4A69 /* Extensions */,
+				6E8875B72A6BFFAE00BE4A69 /* Helpers */,
+				6E8875B02A6BFC8900BE4A69 /* Views */,
+				6E8875972A6BF81A00BE4A69 /* HabitPalsWidgetBundle.swift */,
+				6E8875992A6BF81A00BE4A69 /* HabitPalsWidget.swift */,
+				6E88759B2A6BF81D00BE4A69 /* Assets.xcassets */,
+				6E88759D2A6BF81D00BE4A69 /* Info.plist */,
+				6E8875AA2A6BF96300BE4A69 /* Provider.swift */,
+				6E8875AC2A6BF98100BE4A69 /* SimpleEntry.swift */,
+			);
+			path = HabitPalsWidget;
+			sourceTree = "<group>";
+		};
+		6E8875B02A6BFC8900BE4A69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E8875AE2A6BF9BD00BE4A69 /* WidgetView.swift */,
+				6E8875B12A6BFCA400BE4A69 /* SmallWidgetView.swift */,
+				6E8875B32A6BFCB000BE4A69 /* LargeWidgetView.swift */,
+				6E8875B52A6BFF4800BE4A69 /* MediumWidgetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E8875B72A6BFFAE00BE4A69 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6E8875BA2A6C000F00BE4A69 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6E8B52F62A62A4C700E9569D = {
 			isa = PBXGroup;
 			children = (
 				6E8B53012A62A4C700E9569D /* HabitPals */,
 				6E8B53122A62A4CA00E9569D /* HabitPalsTests */,
 				6E8B531C2A62A4CA00E9569D /* HabitPalsUITests */,
+				6E8875962A6BF81A00BE4A69 /* HabitPalsWidget */,
+				6E8875772A6BCDB900BE4A69 /* Frameworks */,
 				6E8B53002A62A4C700E9569D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -217,6 +329,7 @@
 				6E8B52FF2A62A4C700E9569D /* HabitPals.app */,
 				6E8B530F2A62A4CA00E9569D /* HabitPalsTests.xctest */,
 				6E8B53192A62A4CA00E9569D /* HabitPalsUITests.xctest */,
+				6E8875932A6BF81A00BE4A69 /* HabitPalsWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,6 +475,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6E8875922A6BF81A00BE4A69 /* HabitPalsWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E8875A12A6BF81D00BE4A69 /* Build configuration list for PBXNativeTarget "HabitPalsWidgetExtension" */;
+			buildPhases = (
+				6E88758F2A6BF81A00BE4A69 /* Sources */,
+				6E8875902A6BF81A00BE4A69 /* Frameworks */,
+				6E8875912A6BF81A00BE4A69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HabitPalsWidgetExtension;
+			productName = HabitPalsWidgetExtension;
+			productReference = 6E8875932A6BF81A00BE4A69 /* HabitPalsWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		6E8B52FE2A62A4C700E9569D /* HabitPals */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E8B53232A62A4CA00E9569D /* Build configuration list for PBXNativeTarget "HabitPals" */;
@@ -369,10 +499,12 @@
 				6E8B52FB2A62A4C700E9569D /* Sources */,
 				6E8B52FC2A62A4C700E9569D /* Frameworks */,
 				6E8B52FD2A62A4C700E9569D /* Resources */,
+				6E88758E2A6BCDBC00BE4A69 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6E88759F2A6BF81D00BE4A69 /* PBXTargetDependency */,
 			);
 			name = HabitPals;
 			packageProductDependencies = (
@@ -433,6 +565,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					6E8875922A6BF81A00BE4A69 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					6E8B52FE2A62A4C700E9569D = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -467,11 +602,20 @@
 				6E8B52FE2A62A4C700E9569D /* HabitPals */,
 				6E8B530E2A62A4CA00E9569D /* HabitPalsTests */,
 				6E8B53182A62A4CA00E9569D /* HabitPalsUITests */,
+				6E8875922A6BF81A00BE4A69 /* HabitPalsWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6E8875912A6BF81A00BE4A69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E88759C2A6BF81D00BE4A69 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E8B52FD2A62A4C700E9569D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,6 +643,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E88758F2A6BF81A00BE4A69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E8875AD2A6BF98100BE4A69 /* SimpleEntry.swift in Sources */,
+				6E8875C02A6C03AD00BE4A69 /* +Color.swift in Sources */,
+				6E8875BD2A6C009A00BE4A69 /* HabitsCompletionStatusArc.swift in Sources */,
+				6E8875C42A6C0DF200BE4A69 /* DateUtils.swift in Sources */,
+				6E8875BF2A6C010800BE4A69 /* Arc.swift in Sources */,
+				6E8875B62A6BFF4800BE4A69 /* MediumWidgetView.swift in Sources */,
+				6E88759A2A6BF81A00BE4A69 /* HabitPalsWidget.swift in Sources */,
+				6E8875C32A6C0DF000BE4A69 /* Habit.swift in Sources */,
+				6E8875B42A6BFCB000BE4A69 /* LargeWidgetView.swift in Sources */,
+				6E8875AB2A6BF96300BE4A69 /* Provider.swift in Sources */,
+				6E8875982A6BF81A00BE4A69 /* HabitPalsWidgetBundle.swift in Sources */,
+				6E8875B22A6BFCA400BE4A69 /* SmallWidgetView.swift in Sources */,
+				6E8875AF2A6BF9BD00BE4A69 /* WidgetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E8B52FB2A62A4C700E9569D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -565,6 +729,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6E88759F2A6BF81D00BE4A69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E8875922A6BF81A00BE4A69 /* HabitPalsWidgetExtension */;
+			targetProxy = 6E88759E2A6BF81D00BE4A69 /* PBXContainerItemProxy */;
+		};
 		6E8B53112A62A4CA00E9569D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6E8B52FE2A62A4C700E9569D /* HabitPals */;
@@ -578,6 +747,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6E8875A22A6BF81D00BE4A69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CW3HC33B6M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HabitPalsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitPalsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ionutgrosu.HabitPals.HabitPalsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E8875A32A6BF81D00BE4A69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CW3HC33B6M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HabitPalsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitPalsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ionutgrosu.HabitPals.HabitPalsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6E8B53212A62A4CA00E9569D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -700,6 +925,7 @@
 		6E8B53242A62A4CA00E9569D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -735,6 +961,7 @@
 		6E8B53252A62A4CA00E9569D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -846,6 +1073,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E8875A12A6BF81D00BE4A69 /* Build configuration list for PBXNativeTarget "HabitPalsWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E8875A22A6BF81D00BE4A69 /* Debug */,
+				6E8875A32A6BF81D00BE4A69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6E8B52FA2A62A4C700E9569D /* Build configuration list for PBXProject "HabitPals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
