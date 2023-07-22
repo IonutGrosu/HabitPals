@@ -22,8 +22,10 @@ struct HabitListRow: View {
             HStack {
                 Image(systemName: habit.icon)
                     .font(.title)
+                    .foregroundColor(Color.theme.accent)
                 Text(habit.name)
                     .font(.title2)
+                    .foregroundColor(Color.theme.accent)
                 Spacer()
                 Button {
                     if habit.isCompletedToday == false { 
@@ -49,6 +51,7 @@ struct HabitListRow: View {
                     .tint(.green)
                 Text("\(habit.completedNumberOfDaysAsInt)/\(habit.totalNumberOfDaysAsInt)")
                     .font(.caption2)
+                    .foregroundColor(Color.theme.secondaryText)
             }
             .padding()
         }

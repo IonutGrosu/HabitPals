@@ -35,7 +35,7 @@ struct HabitsView: View {
                     .listRowBackground(
                         RoundedRectangle(cornerRadius: 12)
                             .background(.clear)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color.theme.secondaryBackground)
                             .padding(
                                 EdgeInsets(
                                     top: 10,
@@ -64,7 +64,7 @@ struct HabitsView: View {
         .overlay(Group {
             if viewModel.habits.isEmpty {
                 ZStack {
-                    Color("BackgroundColor")
+                    Color.theme.background
                         .edgesIgnoringSafeArea(.top)
                     if viewModel.isLoading {
                         ProgressView()
@@ -79,10 +79,6 @@ struct HabitsView: View {
                 } catch{}
             }
         })
-        .background{
-            Color("BackgroundColor")
-                .edgesIgnoringSafeArea(.top)
-        }
     }
 }
 

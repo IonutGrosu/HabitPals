@@ -26,7 +26,7 @@ struct CustomTabBarView: View {
                     Text("Habits")
                         .font(.caption)
                 }
-                .foregroundColor(selectedTab == .HABITS ? .green : .black)
+                .foregroundColor(selectedTab == .HABITS ? .green : Color.theme.secondaryText)
                 
             }
             Spacer()
@@ -59,7 +59,7 @@ struct CustomTabBarView: View {
                     Text("Friends")
                         .font(.caption)
                 }
-                .foregroundColor(selectedTab == .FRIENDS ? .green : .black)
+                .foregroundColor(selectedTab == .FRIENDS ? .green : Color.theme.secondaryText)
             }
             Spacer()
         }

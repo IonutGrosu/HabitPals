@@ -20,7 +20,6 @@ struct RootView: View {
                         } label: {
                             Image(systemName: "person.circle")
                         }
-                        .tint(.black)
                     }
                 }
         }

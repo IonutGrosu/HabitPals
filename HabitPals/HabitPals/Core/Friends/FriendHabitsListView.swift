@@ -55,7 +55,7 @@ struct FriendHabitsListView: View {
                 .listRowBackground(
                     RoundedRectangle(cornerRadius: 10)
                         .background(.clear)
-                        .foregroundColor(Color("BackgroundColor"))
+                        .foregroundColor(Color.theme.secondaryBackground)
                         .padding(
                             EdgeInsets(
                                 top: 10,
