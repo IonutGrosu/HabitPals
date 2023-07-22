@@ -30,6 +30,5 @@ struct WidgetView : View {
 #Preview(as: .systemSmall) {
     HabitPalsWidget()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+    SimpleEntry(date: .now, habits: Habit.sampleData)
 }

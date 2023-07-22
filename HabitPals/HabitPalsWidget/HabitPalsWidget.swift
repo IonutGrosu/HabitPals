@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HabitPalsWidget: Widget {
     let kind: String = "HabitPalsWidget"
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -31,6 +32,5 @@ struct HabitPalsWidget: Widget {
 #Preview(as: .systemSmall) {
     HabitPalsWidget()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+    SimpleEntry(date: .now, habits: Habit.sampleData)
 }

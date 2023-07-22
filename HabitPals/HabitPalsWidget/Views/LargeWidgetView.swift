@@ -12,19 +12,20 @@ struct LargeWidgetView: View {
     var entry: SimpleEntry
     
     var body: some View {
-        ForEach(0...3, id: \.self) { _ in
+        ForEach(entry.habits) { habit in
             HStack{
-                Image(systemName: "figure.mind.and.body")
+                Image(systemName: habit.icon)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 25, height: 25)
-                Text("Meditate for 5 minutes")
+                Text(habit.name)
                     .font(.title3)
                 Spacer()
-                Image(systemName: "checkmark.circle")
+                Image(systemName: habit.isCompletedToday ? "checkmark.circle.fill" : "checkmark.circle")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)
+                    .foregroundColor(habit.isCompletedToday ? .green : .gray)
             }.padding()
             Divider()
         }

@@ -20,10 +20,13 @@ struct HabitsCompletionStatusArc: View {
     }
     
     var body: some View {
-        Arc(startAngle: .degrees(0), endAngle: .degrees(getEndAngle()), clockwise: false)
-            .stroke(uncompletedHabits == 0 ? .green : .yellow, lineWidth: lineWidth)
-            .frame(width: size, height: size)
-            .rotationEffect(.degrees(-90))
+        ZStack {
+            Circle().stroke(lineWidth: lineWidth).frame(width: size, height: size)
+            Arc(startAngle: .degrees(0), endAngle: .degrees(getEndAngle()), clockwise: false)
+                .stroke(uncompletedHabits == 0 ? .green : .yellow, lineWidth: lineWidth)
+                .frame(width: size, height: size)
+                .rotationEffect(.degrees(-90))
+        }
     }
     
     func getEndAngle() -> Double {

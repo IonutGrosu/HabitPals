@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseCore
 
 struct HabitRepository {
     static let shared = HabitRepository()
