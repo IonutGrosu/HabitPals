@@ -49,7 +49,7 @@ struct Habit: Identifiable, Codable {
 extension Habit {
     
     static let sampleData: [Habit] = [
-        Habit(name: "Read 20 pages per day", icon: "book.closed.fill", totalNumberOfDays: 21),
+        Habit(name: "Read 20 pages per day", icon: "book.closed.fill", totalNumberOfDays: 21, complete: true),
         Habit(name: "Wake up before 8 AM", icon: "alarm.fill", totalNumberOfDays: 21),
         Habit(name: "Meditate for 5 minutes", icon: "figure.mind.and.body", totalNumberOfDays: 21),
         Habit(name: "Get sunlight", icon: "sun.min.fill", totalNumberOfDays: 21)

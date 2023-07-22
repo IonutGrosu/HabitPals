@@ -18,7 +18,7 @@ struct HabitListRow: View {
     var habitUpdateAction: (_ showConfetti: Bool) -> Void
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Image(systemName: habit.icon)
                     .font(.title)
@@ -46,14 +46,23 @@ struct HabitListRow: View {
                     bottom: 0,
                     trailing: 5
                 ))
-            HStack {
-                ProgressView(value: habit.completedNumberOfDays, total: habit.totalNumberOfDays)
+            
+            if habit.complete {
+                ProgressView(value: habit.completedNumberOfDays, total: habit.totalNumberOfDays, label: {Label("Ongoing for \(habit.completedNumberOfDaysAsInt) days", systemImage: "arrow.triangle.2.circlepath").font(.callout)})
+                    .padding(.vertical)
+                    .padding(.horizontal, 10)
                     .tint(.green)
-                Text("\(habit.completedNumberOfDaysAsInt)/\(habit.totalNumberOfDaysAsInt)")
-                    .font(.caption2)
-                    .foregroundColor(Color.theme.secondaryText)
+            } else {
+                HStack {
+                    ProgressView(value: habit.completedNumberOfDays, total: habit.totalNumberOfDays)
+                        .tint(.green)
+                    Text("\(habit.completedNumberOfDaysAsInt)/\(habit.totalNumberOfDaysAsInt)")
+                        .font(.caption2)
+                        .foregroundColor(Color.theme.secondaryText)
+                }
+                .padding()
             }
-            .padding()
+            
         }
         .onChange(of: habit.complete) { _ in
             showConfetti = true
