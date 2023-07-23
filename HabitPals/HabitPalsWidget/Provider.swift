@@ -6,6 +6,7 @@
 //
 
 import WidgetKit
+import FirebaseCore
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -15,10 +16,10 @@ struct Provider: TimelineProvider {
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         Task {
             do {
+                FirebaseApp.configure() // this seems very stupid, definitely the wrong way to do it
 //                let userId = try AuthenticationService.shared.getAuthenticatedUserId()
                 let userId = "aKDrkWarl2UfI7vjfTrOOMhWAul1"
                 let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
-//                let firstFourHabits = Array(habits.prefix(4))
                 let entry = SimpleEntry(date: .now, habits: habits)
                 completion(entry)
             } catch {
@@ -31,13 +32,13 @@ struct Provider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
         Task {
             do {
+                FirebaseApp.configure()
 //                let userId = try AuthenticationService.shared.getAuthenticatedUserId()
                 let userId = "aKDrkWarl2UfI7vjfTrOOMhWAul1"
                 let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
-//                let firstFourHabits = Array(habits.prefix(4))
                 
                 let entry = SimpleEntry(date: .now, habits: habits)
-                let timeline = Timeline(entries: [entry], policy: .after(.now.advanced(by: 60 * 30)))
+                let timeline = Timeline(entries: [entry], policy: .after(.now.advanced(by: 60 * 1)))
                 
                 completion(timeline)
             } catch {

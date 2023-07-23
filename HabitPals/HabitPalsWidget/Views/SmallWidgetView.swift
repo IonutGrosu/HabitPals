@@ -11,26 +11,22 @@ import WidgetKit
 struct SmallWidgetView: View {
     var entry: SimpleEntry
     
-    @State var totalOngoingHabits = 0.0
-    @State var habitsCompletedToday = 0.0
+    @ObservedObject var vm = WidgetViewModel()
     
     var body: some View {
         ZStack {
-            HabitsCompletionStatusArc(totalOngoingHabits: $totalOngoingHabits, habitsCompletedToday: $habitsCompletedToday, size: 120, lineWidth: 8)
-            Text("\(Int(habitsCompletedToday))/\(Int(totalOngoingHabits))")
-                .font(.system(size: 48, weight: .bold))
-        }.onAppear{
-            countHabits(habits: entry.habits)
-        }
-    }
-    
-    func countHabits(habits: [Habit]) {
-        habits.forEach { habit in
-            totalOngoingHabits += 1
-            
-            if habit.isCompletedToday {
-                habitsCompletedToday += 1
+            if vm.totalOngoingHabits == 0 {
+                Text("No ongoing habits to track")
+            } else {
+                let progress: Double = vm.habitsCompletedToday/vm.totalOngoingHabits
+                
+                CompletedHabitsProgressCircleView(size: 125, lineWidth: 15, progress: progress)
+                
+                Text("\(Int(vm.habitsCompletedToday))/\(Int(vm.totalOngoingHabits))")
+                    .font(.system(size: 48, weight: .bold, design: .rounded))
             }
+        }.onAppear{
+            vm.prepareHabits(habits: entry.habits)
         }
     }
 }

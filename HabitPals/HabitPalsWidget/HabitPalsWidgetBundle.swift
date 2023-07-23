@@ -7,9 +7,10 @@
 
 import WidgetKit
 import SwiftUI
+import FirebaseCore
 
 @main
-struct HabitPalsWidgetBundle: WidgetBundle {
+struct HabitPalsWidgetBundle: WidgetBundle {    
     var body: some Widget {
         HabitPalsWidget()
     }
