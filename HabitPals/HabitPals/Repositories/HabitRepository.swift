@@ -9,6 +9,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseCore
+import WidgetKit
 
 struct HabitRepository {
     static let shared = HabitRepository()
@@ -29,6 +30,7 @@ struct HabitRepository {
     
     func saveHabit(habit: Habit, userId: String) throws {
         try habitDocumentRef(userId: userId, habitId: habit.id.uuidString).setData(from: habit)
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
     func addListenerForHabitsByUserId(userId: String, completion: @escaping (_ habits: [Habit]) -> Void) {
@@ -56,9 +58,20 @@ struct HabitRepository {
             habits = snapshot.documents.compactMap({try? $0.data(as: Habit.self)})
             
         } catch {}
-        
-        print(habits)
-        
+                
         return habits
+    }
+    
+    func fetchHabitWithId(habitId: String, userId: String) async -> Habit {
+        
+        var habit: Habit = Habit.emptyHabit
+        
+        do {
+            habit = try await habitDocumentRef(userId: userId, habitId: habitId).getDocument(as: Habit.self)
+        } catch {
+            print("Problem fetching a single habit")
+        }
+        
+        return habit
     }
 }

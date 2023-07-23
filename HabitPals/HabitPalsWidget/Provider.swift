@@ -10,7 +10,7 @@ import FirebaseCore
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), habits: Habit.sampleData )
+        SimpleEntry(date: Date(), habits: Habit.sampleData)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {

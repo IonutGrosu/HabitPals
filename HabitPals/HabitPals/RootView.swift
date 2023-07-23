@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
-
-
+import WidgetKit
 
 struct RootView: View {
+    @Environment(\.scenePhase) var scenePhase
+    
     var body: some View {
         NavigationStack {
             MainTabGroupView()
@@ -22,6 +23,13 @@ struct RootView: View {
                         }
                     }
                 }
+        }
+        .onChange(of: scenePhase) { oldValue, newValue in
+            if newValue == .background{
+                print("App going to background")
+                WidgetCenter.shared.reloadAllTimelines()
+
+            }
         }
     }
 }
