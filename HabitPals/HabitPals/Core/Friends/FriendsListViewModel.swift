@@ -21,6 +21,27 @@ final class FriendsListViewModel: ObservableObject {
         
         print(friends)
         
+        
+        // save friends array to user defaults
+        
+        let widgetFriends: [WidgetDbUser] = friends.map { friend in
+            return WidgetDbUser(id: friend.authId, name: friend.name ?? "Unavailable name")
+        }
+        
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+
+            // Encode Note
+            let data = try encoder.encode(widgetFriends)
+
+            // Write/Set Data
+            UserDefaults(suiteName: "group.com.ionutgrosu.shared")?.set(data, forKey: "widgetFriendsArray")
+
+        } catch {
+            print("Unable to Encode Data (\(error))")
+        }
+        
     }
     
 }

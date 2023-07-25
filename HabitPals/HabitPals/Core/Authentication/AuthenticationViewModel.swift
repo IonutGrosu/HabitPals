@@ -19,6 +19,7 @@ final class AuthenticationViewModel: ObservableObject {
         try await UserRepository.shared.createNewUser(user: user)
         
         UserDefaults.standard.setValue(true, forKey: "signedIn")
+        UserDefaults(suiteName: "group.com.ionutgrosu.shared")?.set(user.authId, forKey: "authenticatedUserId")
     }
 
 }

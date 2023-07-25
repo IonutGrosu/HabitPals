@@ -15,5 +15,9 @@
 	</array>
 	<key>GIDClientID</key>
 	<string>177099410074-f3kmmq50dm2dea9jls5n3f4l4en2u3s3.apps.googleusercontent.com</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>HabitPalsConfigurationIntent</string>
+	</array>
 </dict>
 </plist>

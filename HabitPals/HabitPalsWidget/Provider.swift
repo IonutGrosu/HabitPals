@@ -15,9 +15,9 @@ struct Provider: AppIntentTimelineProvider {
     
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> HabitsEntry {
         FirebaseApp.configure() // this seems very stupid, definitely the wrong way to do it
-//        let userId = try AuthenticationService.shared.getAuthenticatedUserId()
-        let userId = "aKDrkWarl2UfI7vjfTrOOMhWAul1"
+        let userId = UserDefaults(suiteName: "group.com.ionutgrosu.shared")?.string(forKey: "authenticatedUserId") ?? ""
         let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
+        
         let entry = HabitsEntry(date: .now, habits: habits, configuration: configuration)
         return entry
     }
@@ -25,8 +25,7 @@ struct Provider: AppIntentTimelineProvider {
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<HabitsEntry> {
         
         FirebaseApp.configure()
-//        let userId = try AuthenticationService.shared.getAuthenticatedUserId()
-        let userId = "aKDrkWarl2UfI7vjfTrOOMhWAul1"
+        let userId = UserDefaults(suiteName: "group.com.ionutgrosu.shared")?.string(forKey: "authenticatedUserId") ?? ""
         let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
         
         let entry = HabitsEntry(date: .now, habits: habits, configuration: configuration)
