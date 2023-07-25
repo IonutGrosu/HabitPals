@@ -22,7 +22,7 @@ struct LargeWidgetView: View {
             } else {
                 
                 HStack {
-                    Text("My progress")
+                    Text(vm.title)
                         .font(.system(.title, design: .rounded))
                         .bold()
                     Text("\(Int(vm.habitsCompletedToday))/\(Int(vm.totalOngoingHabits))")
@@ -62,7 +62,7 @@ struct LargeWidgetView: View {
                 Spacer()
             }
         }.onAppear{
-            vm.prepareHabits(habits: entry.habits)
+            vm.handleEntry(entry: entry)
         }
     }
     

@@ -14,19 +14,25 @@ struct SmallWidgetView: View {
     @ObservedObject var vm = WidgetViewModel()
     
     var body: some View {
-        ZStack {
-            if vm.totalOngoingHabits == 0 {
-                Text("No ongoing habits to track")
-            } else {
-                let progress: Double = vm.habitsCompletedToday/vm.totalOngoingHabits
-                
-                CompletedHabitsProgressCircleView(size: 125, lineWidth: 15, progress: progress)
-                
-                Text("\(Int(vm.habitsCompletedToday))/\(Int(vm.totalOngoingHabits))")
-                    .font(.system(size: 48, weight: .bold, design: .rounded))
+        VStack {
+            Text(vm.title)
+                .bold()
+                .padding(.bottom, 8)
+            
+            ZStack {
+                if vm.totalOngoingHabits == 0 {
+                    Text("No ongoing habits to track")
+                } else {
+                    let progress: Double = vm.habitsCompletedToday/vm.totalOngoingHabits
+                    
+                    CompletedHabitsProgressCircleView(size: 85, lineWidth: 8, progress: progress)
+                    
+                    Text("\(Int(vm.habitsCompletedToday))/\(Int(vm.totalOngoingHabits))")
+                        .font(.system(size: 32, weight: .bold, design: .rounded))
+                }
+            }.onAppear{
+                vm.handleEntry(entry: entry)
             }
-        }.onAppear{
-            vm.prepareHabits(habits: entry.habits)
         }
     }
 }

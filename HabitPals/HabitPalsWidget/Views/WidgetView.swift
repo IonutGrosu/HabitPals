@@ -26,24 +26,3 @@ struct WidgetView : View {
         }
     }
 }
-
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.user = "😀"
-        return intent
-    }
-
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.user = "🤩"
-        return intent
-    }
-}
-
-#Preview(as: .systemSmall) {
-    HabitPalsWidget()
-} timeline: {
-    HabitsEntry(date: .now, habits: Habit.sampleData, configuration: .smiley)
-    HabitsEntry(date: .now, habits: Habit.sampleData, configuration: .starEyes)
-}

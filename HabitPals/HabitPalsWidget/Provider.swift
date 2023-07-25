@@ -10,26 +10,28 @@ import FirebaseCore
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> HabitsEntry {
-        HabitsEntry(date: Date(), habits: Habit.sampleData, configuration: ConfigurationAppIntent())
+        HabitsEntry(date: Date(), habits: Habit.sampleData, user: WidgetDbUser(id: "testId", name: "John Doe"), configuration: ConfigurationAppIntent())
     }
     
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> HabitsEntry {
         FirebaseApp.configure() // this seems very stupid, definitely the wrong way to do it
-        let userId = UserDefaults(suiteName: "group.com.ionutgrosu.shared")?.string(forKey: "authenticatedUserId") ?? ""
-        let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
-        
-        let entry = HabitsEntry(date: .now, habits: habits, configuration: configuration)
+
+        let user = WidgetDbUser.getUser(for: configuration.user)
+        let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: user.id)
+//        let user = await UserRepository.shared.getUser(userId)
+        let entry = HabitsEntry(date: .now, habits: habits, user: user, configuration: configuration)
         return entry
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<HabitsEntry> {
-        
         FirebaseApp.configure()
-        let userId = UserDefaults(suiteName: "group.com.ionutgrosu.shared")?.string(forKey: "authenticatedUserId") ?? ""
-        let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
         
-        let entry = HabitsEntry(date: .now, habits: habits, configuration: configuration)
-        let timeline = Timeline(entries: [entry], policy: .after(.now.advanced(by: 60 * 1)))
+        let user = WidgetDbUser.getUser(for: configuration.user)
+        let habits = await HabitRepository.shared.fetchHabitsForUserId(userId: user.id)
+//        let user = await UserRepository.shared.getUser(userId)
+        
+        let entry = HabitsEntry(date: .now, habits: habits,user: user, configuration: configuration)
+        let timeline = Timeline(entries: [entry], policy: .never)
                 
         return timeline
     }

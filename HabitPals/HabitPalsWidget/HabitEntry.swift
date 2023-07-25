@@ -10,5 +10,6 @@ import WidgetKit
 struct HabitsEntry: TimelineEntry {
     let date: Date
     let habits: [Habit]
+    let user: WidgetDbUser
     let configuration: ConfigurationAppIntent
 }

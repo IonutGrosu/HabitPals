@@ -36,7 +36,6 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
                     print("Unable to Decode Data (\(error))")
                 }
             }
-                        
             var friendNames: [String] = friends.map { friend in
                 friend.name
             }
@@ -46,6 +45,4 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
             return friendNames
         }
     }
-    
-    
 }

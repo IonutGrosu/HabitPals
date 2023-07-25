@@ -20,13 +20,6 @@ struct DbUser: Codable, Hashable {
         self.pictureURL = pictureURL
     }
     
-    init(auth: AuthDataResultModel) {
-        self.name = auth.name
-        self.email = auth.email
-        self.authId = auth.uid
-        self.pictureURL = auth.photoUrl
-      }
-    
     static var emptyUser: DbUser {
         return DbUser(name: "", email: "", authId: "", pictureURL: "")
     }
