@@ -29,10 +29,10 @@
 		6E8A27132A6FBC5700573A49 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8875782A6BCDB900BE4A69 /* WidgetKit.framework */; };
 		6E8A27142A6FBC5700573A49 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88757A2A6BCDB900BE4A69 /* SwiftUI.framework */; };
 		6E8A27172A6FBC5700573A49 /* HabitPalsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27162A6FBC5700573A49 /* HabitPalsWidgetBundle.swift */; };
-		6E8A27192A6FBC5700573A49 /* HabitPalsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27182A6FBC5700573A49 /* HabitPalsWidget.swift */; };
+		6E8A27192A6FBC5700573A49 /* HabitPalsDailyProgressWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27182A6FBC5700573A49 /* HabitPalsDailyProgressWidget.swift */; };
 		6E8A271D2A6FBC5900573A49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8A271C2A6FBC5900573A49 /* Assets.xcassets */; };
 		6E8A27212A6FBC5900573A49 /* HabitPalsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6E8A27122A6FBC5700573A49 /* HabitPalsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6E8A27442A6FBE2200573A49 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27412A6FBE2200573A49 /* AppIntent.swift */; };
+		6E8A27442A6FBE2200573A49 /* DailyProgressConfigurationAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27412A6FBE2200573A49 /* DailyProgressConfigurationAppIntent.swift */; };
 		6E8A27452A6FBE2200573A49 /* CompleteHabitIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27422A6FBE2200573A49 /* CompleteHabitIntent.swift */; };
 		6E8A27472A6FBE3C00573A49 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53462A62A59A00E9569D /* Habit.swift */; };
 		6E8A27482A6FBE4500573A49 /* HabitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B532E2A62A52300E9569D /* HabitRepository.swift */; };
@@ -41,10 +41,9 @@
 		6E8A274D2A6FBEED00573A49 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E8A274C2A6FBEED00573A49 /* FirebaseFirestoreSwift */; };
 		6E8A274E2A6FBF2A00573A49 /* +Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8875702A69A74900BE4A69 /* +Color.swift */; };
 		6E8A274F2A6FBF3700573A49 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B53532A62A5C400E9569D /* DateUtils.swift */; };
-		6E8A27512A6FBF6600573A49 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27502A6FBF6600573A49 /* Provider.swift */; };
-		6E8A27532A6FBFA000573A49 /* HabitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27522A6FBFA000573A49 /* HabitEntry.swift */; };
-		6E8A27672A6FC5E000573A49 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27612A6FC5E000573A49 /* MediumWidgetView.swift */; };
-		6E8A27682A6FC5E000573A49 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27622A6FC5E000573A49 /* WidgetView.swift */; };
+		6E8A27512A6FBF6600573A49 /* DailyProgressHabitsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27502A6FBF6600573A49 /* DailyProgressHabitsProvider.swift */; };
+		6E8A27532A6FBFA000573A49 /* HabitsListEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27522A6FBFA000573A49 /* HabitsListEntry.swift */; };
+		6E8A27682A6FC5E000573A49 /* DailyProgressWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27622A6FC5E000573A49 /* DailyProgressWidgetView.swift */; };
 		6E8A27692A6FC5E000573A49 /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27632A6FC5E000573A49 /* WidgetViewModel.swift */; };
 		6E8A276A2A6FC5E000573A49 /* CompletedHabitsProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27642A6FC5E000573A49 /* CompletedHabitsProgressCircleView.swift */; };
 		6E8A276B2A6FC5E000573A49 /* LargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A27652A6FC5E000573A49 /* LargeWidgetView.swift */; };
@@ -90,6 +89,12 @@
 		6E9D70E82A704F88002ED92C /* +DbUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9D70E72A704F88002ED92C /* +DbUser.swift */; };
 		6E9D70EC2A7050DA002ED92C /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9D70EB2A7050DA002ED92C /* AuthDataResultModel.swift */; };
 		6E9D70EE2A705108002ED92C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6E9D70ED2A705108002ED92C /* FirebaseAuth */; };
+		6EAD69FE2A72565500E6E929 /* SingleHabitViewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD69FC2A72565000E6E929 /* SingleHabitViewWidget.swift */; };
+		6EAD6A012A725E8800E6E929 /* SingleHabitConfigurationAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD6A002A725E8800E6E929 /* SingleHabitConfigurationAppIntent.swift */; };
+		6EAD6A052A7262FD00E6E929 /* SingleHabitViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD6A042A7262FD00E6E929 /* SingleHabitViewProvider.swift */; };
+		6EAD6A072A72642200E6E929 /* SingleHabitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD6A062A72642200E6E929 /* SingleHabitEntry.swift */; };
+		6EAD6A0B2A726BF400E6E929 /* SingleHabitWidgetview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD6A0A2A726BF400E6E929 /* SingleHabitWidgetview.swift */; };
+		6EAD6A0D2A726C4000E6E929 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD6A0C2A726C4000E6E929 /* MediumWidgetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,15 +158,14 @@
 		6E88757A2A6BCDB900BE4A69 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		6E8A27122A6FBC5700573A49 /* HabitPalsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HabitPalsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8A27162A6FBC5700573A49 /* HabitPalsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPalsWidgetBundle.swift; sourceTree = "<group>"; };
-		6E8A27182A6FBC5700573A49 /* HabitPalsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPalsWidget.swift; sourceTree = "<group>"; };
+		6E8A27182A6FBC5700573A49 /* HabitPalsDailyProgressWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPalsDailyProgressWidget.swift; sourceTree = "<group>"; };
 		6E8A271C2A6FBC5900573A49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E8A271E2A6FBC5900573A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E8A27412A6FBE2200573A49 /* AppIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		6E8A27412A6FBE2200573A49 /* DailyProgressConfigurationAppIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyProgressConfigurationAppIntent.swift; sourceTree = "<group>"; };
 		6E8A27422A6FBE2200573A49 /* CompleteHabitIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteHabitIntent.swift; sourceTree = "<group>"; };
-		6E8A27502A6FBF6600573A49 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		6E8A27522A6FBFA000573A49 /* HabitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitEntry.swift; sourceTree = "<group>"; };
-		6E8A27612A6FC5E000573A49 /* MediumWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
-		6E8A27622A6FC5E000573A49 /* WidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		6E8A27502A6FBF6600573A49 /* DailyProgressHabitsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyProgressHabitsProvider.swift; sourceTree = "<group>"; };
+		6E8A27522A6FBFA000573A49 /* HabitsListEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsListEntry.swift; sourceTree = "<group>"; };
+		6E8A27622A6FC5E000573A49 /* DailyProgressWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyProgressWidgetView.swift; sourceTree = "<group>"; };
 		6E8A27632A6FC5E000573A49 /* WidgetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
 		6E8A27642A6FC5E000573A49 /* CompletedHabitsProgressCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedHabitsProgressCircleView.swift; sourceTree = "<group>"; };
 		6E8A27652A6FC5E000573A49 /* LargeWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeWidgetView.swift; sourceTree = "<group>"; };
@@ -204,6 +208,12 @@
 		6E9D70DD2A6FD489002ED92C /* WidgetDbUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDbUser.swift; sourceTree = "<group>"; };
 		6E9D70E72A704F88002ED92C /* +DbUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+DbUser.swift"; sourceTree = "<group>"; };
 		6E9D70EB2A7050DA002ED92C /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
+		6EAD69FC2A72565000E6E929 /* SingleHabitViewWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHabitViewWidget.swift; sourceTree = "<group>"; };
+		6EAD6A002A725E8800E6E929 /* SingleHabitConfigurationAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHabitConfigurationAppIntent.swift; sourceTree = "<group>"; };
+		6EAD6A042A7262FD00E6E929 /* SingleHabitViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHabitViewProvider.swift; sourceTree = "<group>"; };
+		6EAD6A062A72642200E6E929 /* SingleHabitEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHabitEntry.swift; sourceTree = "<group>"; };
+		6EAD6A0A2A726BF400E6E929 /* SingleHabitWidgetview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHabitWidgetview.swift; sourceTree = "<group>"; };
+		6EAD6A0C2A726C4000E6E929 /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,12 +314,9 @@
 		6E8A27152A6FBC5700573A49 /* HabitPalsWidget */ = {
 			isa = PBXGroup;
 			children = (
+				6EAD69FF2A72583A00E6E929 /* Widgets */,
 				6E8A27602A6FC5E000573A49 /* Views */,
-				6E8A27522A6FBFA000573A49 /* HabitEntry.swift */,
-				6E8A27502A6FBF6600573A49 /* Provider.swift */,
 				6E8A27402A6FBE0800573A49 /* Intents */,
-				6E8A27162A6FBC5700573A49 /* HabitPalsWidgetBundle.swift */,
-				6E8A27182A6FBC5700573A49 /* HabitPalsWidget.swift */,
 				6E8A271C2A6FBC5900573A49 /* Assets.xcassets */,
 				6E8A271E2A6FBC5900573A49 /* Info.plist */,
 			);
@@ -319,8 +326,9 @@
 		6E8A27402A6FBE0800573A49 /* Intents */ = {
 			isa = PBXGroup;
 			children = (
-				6E8A27412A6FBE2200573A49 /* AppIntent.swift */,
+				6E8A27412A6FBE2200573A49 /* DailyProgressConfigurationAppIntent.swift */,
 				6E8A27422A6FBE2200573A49 /* CompleteHabitIntent.swift */,
+				6EAD6A002A725E8800E6E929 /* SingleHabitConfigurationAppIntent.swift */,
 			);
 			path = Intents;
 			sourceTree = "<group>";
@@ -328,12 +336,8 @@
 		6E8A27602A6FC5E000573A49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6E8A27612A6FC5E000573A49 /* MediumWidgetView.swift */,
-				6E8A27622A6FC5E000573A49 /* WidgetView.swift */,
-				6E8A27632A6FC5E000573A49 /* WidgetViewModel.swift */,
-				6E8A27642A6FC5E000573A49 /* CompletedHabitsProgressCircleView.swift */,
-				6E8A27652A6FC5E000573A49 /* LargeWidgetView.swift */,
-				6E8A27662A6FC5E000573A49 /* SmallWidgetView.swift */,
+				6EAD6A092A726BC400E6E929 /* SingleHabitView */,
+				6EAD6A082A726A0D00E6E929 /* DailyProgress */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -502,6 +506,57 @@
 				6E9D70EB2A7050DA002ED92C /* AuthDataResultModel.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		6EAD69FF2A72583A00E6E929 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				6EAD6A032A72629D00E6E929 /* SingleHabitView */,
+				6EAD6A022A72627B00E6E929 /* DailyProgress */,
+				6E8A27162A6FBC5700573A49 /* HabitPalsWidgetBundle.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		6EAD6A022A72627B00E6E929 /* DailyProgress */ = {
+			isa = PBXGroup;
+			children = (
+				6E8A27522A6FBFA000573A49 /* HabitsListEntry.swift */,
+				6E8A27502A6FBF6600573A49 /* DailyProgressHabitsProvider.swift */,
+				6E8A27182A6FBC5700573A49 /* HabitPalsDailyProgressWidget.swift */,
+			);
+			path = DailyProgress;
+			sourceTree = "<group>";
+		};
+		6EAD6A032A72629D00E6E929 /* SingleHabitView */ = {
+			isa = PBXGroup;
+			children = (
+				6EAD69FC2A72565000E6E929 /* SingleHabitViewWidget.swift */,
+				6EAD6A042A7262FD00E6E929 /* SingleHabitViewProvider.swift */,
+				6EAD6A062A72642200E6E929 /* SingleHabitEntry.swift */,
+			);
+			path = SingleHabitView;
+			sourceTree = "<group>";
+		};
+		6EAD6A082A726A0D00E6E929 /* DailyProgress */ = {
+			isa = PBXGroup;
+			children = (
+				6E8A27622A6FC5E000573A49 /* DailyProgressWidgetView.swift */,
+				6E8A27632A6FC5E000573A49 /* WidgetViewModel.swift */,
+				6E8A27642A6FC5E000573A49 /* CompletedHabitsProgressCircleView.swift */,
+				6E8A27652A6FC5E000573A49 /* LargeWidgetView.swift */,
+				6E8A27662A6FC5E000573A49 /* SmallWidgetView.swift */,
+			);
+			path = DailyProgress;
+			sourceTree = "<group>";
+		};
+		6EAD6A092A726BC400E6E929 /* SingleHabitView */ = {
+			isa = PBXGroup;
+			children = (
+				6EAD6A0A2A726BF400E6E929 /* SingleHabitWidgetview.swift */,
+				6EAD6A0C2A726C4000E6E929 /* MediumWidgetView.swift */,
+			);
+			path = SingleHabitView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -687,25 +742,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E8A276C2A6FC5E000573A49 /* SmallWidgetView.swift in Sources */,
-				6E8A27192A6FBC5700573A49 /* HabitPalsWidget.swift in Sources */,
-				6E8A27532A6FBFA000573A49 /* HabitEntry.swift in Sources */,
+				6E8A27192A6FBC5700573A49 /* HabitPalsDailyProgressWidget.swift in Sources */,
+				6EAD69FE2A72565500E6E929 /* SingleHabitViewWidget.swift in Sources */,
+				6EAD6A0D2A726C4000E6E929 /* MediumWidgetView.swift in Sources */,
+				6E8A27532A6FBFA000573A49 /* HabitsListEntry.swift in Sources */,
 				6E8A276A2A6FC5E000573A49 /* CompletedHabitsProgressCircleView.swift in Sources */,
-				6E8A27512A6FBF6600573A49 /* Provider.swift in Sources */,
+				6E8A27512A6FBF6600573A49 /* DailyProgressHabitsProvider.swift in Sources */,
 				6E9D70CE2A6FCE33002ED92C /* DbFriendList.swift in Sources */,
 				6E8A27172A6FBC5700573A49 /* HabitPalsWidgetBundle.swift in Sources */,
 				6E9D70DF2A6FD48E002ED92C /* WidgetDbUser.swift in Sources */,
 				6E8A27692A6FC5E000573A49 /* WidgetViewModel.swift in Sources */,
 				6E8A274E2A6FBF2A00573A49 /* +Color.swift in Sources */,
 				6E8A274F2A6FBF3700573A49 /* DateUtils.swift in Sources */,
-				6E8A27442A6FBE2200573A49 /* AppIntent.swift in Sources */,
+				6E8A27442A6FBE2200573A49 /* DailyProgressConfigurationAppIntent.swift in Sources */,
+				6EAD6A072A72642200E6E929 /* SingleHabitEntry.swift in Sources */,
 				6E8A27472A6FBE3C00573A49 /* Habit.swift in Sources */,
+				6EAD6A0B2A726BF400E6E929 /* SingleHabitWidgetview.swift in Sources */,
+				6EAD6A052A7262FD00E6E929 /* SingleHabitViewProvider.swift in Sources */,
 				6E8A276B2A6FC5E000573A49 /* LargeWidgetView.swift in Sources */,
-				6E8A27672A6FC5E000573A49 /* MediumWidgetView.swift in Sources */,
 				6E8A27482A6FBE4500573A49 /* HabitRepository.swift in Sources */,
 				6E9D70E62A704E6F002ED92C /* DbUser.swift in Sources */,
 				6E8A27452A6FBE2200573A49 /* CompleteHabitIntent.swift in Sources */,
 				6E9D70D02A6FCE43002ED92C /* +Sequence.swift in Sources */,
-				6E8A27682A6FC5E000573A49 /* WidgetView.swift in Sources */,
+				6E8A27682A6FC5E000573A49 /* DailyProgressWidgetView.swift in Sources */,
+				6EAD6A012A725E8800E6E929 /* SingleHabitConfigurationAppIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

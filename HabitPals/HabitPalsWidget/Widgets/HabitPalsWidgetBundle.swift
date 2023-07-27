@@ -11,6 +11,7 @@ import SwiftUI
 @main
 struct HabitPalsWidgetBundle: WidgetBundle {
     var body: some Widget {
-        HabitPalsWidget()
+        HabitPalsDailyProgressWidget()
+        SingleHabitViewWidget()
     }
 }

@@ -25,10 +25,12 @@ struct CompletedHabitsProgressCircleView: View {
     }
     
     func getProgressColor() -> Color {
-        if progress >= 0.75{
-            .green
+        if progress == 1{
+            return .green
+        } else if progress >= 0.33 {
+            return .yellow
         } else {
-            .yellow
+            return .red
         }
     }
 }

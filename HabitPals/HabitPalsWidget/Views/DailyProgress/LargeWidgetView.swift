@@ -9,9 +9,9 @@ import SwiftUI
 import WidgetKit
 
 struct LargeWidgetView: View {
-    var entry: HabitsEntry
+    var entry: HabitsListEntry
     
-    @ObservedObject var vm = WidgetViewModel()
+    @ObservedObject var vm = DailyProgressWidgetViewModel()
     
     var body: some View {
         
@@ -55,7 +55,7 @@ struct LargeWidgetView: View {
                         }
                         .buttonStyle(.plain)
                         .disabled(habit.isCompletedToday)
-                        
+                        .disabled(vm.disabledCompleteButton)
                     }.padding()
                     Divider()
                 }

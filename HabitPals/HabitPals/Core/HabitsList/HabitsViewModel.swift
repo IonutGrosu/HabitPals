@@ -18,6 +18,22 @@ final class HabitsViewModel: ObservableObject {
         isLoading = true
         self.habits = await HabitRepository.shared.fetchHabitsForUserId(userId: userId)
         isLoading = false
+        
+        
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+
+            // Encode Note
+            let data = try encoder.encode(habits)
+
+            // Write/Set Data
+            UserDefaults(suiteName: "group.com.ionutgrosu.shared")?.set(data, forKey: "widgetHabitsArray")
+            print("Saved habits to defaults")
+
+        } catch {
+            print("Unable to Encode Data (\(error))")
+        }
     }
     
     func saveHabit(habit: Habit) throws {

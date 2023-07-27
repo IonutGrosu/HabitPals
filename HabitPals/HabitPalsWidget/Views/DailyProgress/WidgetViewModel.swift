@@ -7,16 +7,19 @@
 
 import Foundation
 
-final class WidgetViewModel: ObservableObject {
+final class DailyProgressWidgetViewModel: ObservableObject {
     @Published var presentingHabits: [Habit] = []
     @Published var totalOngoingHabits = 0.0
     @Published var habitsCompletedToday = 0.0
     @Published var title = ""
+    @Published var disabledCompleteButton = false
     
-    func handleEntry(entry: HabitsEntry) {
+    func handleEntry(entry: HabitsListEntry) {
         setTitle(userName: entry.user.name)
         prepareHabits(habits: entry.habits)
         countHabits(habits: entry.habits)
+        
+        disabledCompleteButton = entry.user.name != "Myself"
     }
     
     func setTitle(userName: String) {

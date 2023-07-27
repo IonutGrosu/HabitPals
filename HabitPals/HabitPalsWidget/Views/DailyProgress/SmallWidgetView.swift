@@ -9,9 +9,9 @@ import SwiftUI
 import WidgetKit
 
 struct SmallWidgetView: View {
-    var entry: HabitsEntry
+    var entry: HabitsListEntry
     
-    @ObservedObject var vm = WidgetViewModel()
+    @ObservedObject var vm = DailyProgressWidgetViewModel()
     
     var body: some View {
         VStack {
